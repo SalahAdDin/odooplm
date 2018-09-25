@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Views -->
+    <record id="plm_bom_line_measure" model="ir.ui.view">
+        <field name="name">plm.bom.form.measure</field>
+        <field name="model">mrp.bom</field>
+        <field name="inherit_id" ref="plm.plm_bom_form_view"/>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='bom_line_ids']/tree/field[@name='type']" position="after">
+                <field name="measure"/>
+                <field name="measure_uom_id"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>
